@@ -1,12 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./header.css"
 import SwitchDarkLight from '../switchDarkLight/switchDarkLight'
-import ThemeContext from '../../context/ThemeContext'
-
 
 const Header = () => {
 
-  const {theme} = useContext(ThemeContext)
 
   const [city, setCity] = useState("")
 
@@ -16,11 +13,12 @@ const Header = () => {
       .then(res => res.json())
       .then(res => setCity(res.address.city))
       .catch(err => console.error('error:' + err));
+      
       })
   }, [])
 
   return (
-    <header data-theme={theme}>
+    <header>
       <div>
         <i className="fa-solid fa-location-dot"></i>
         <p>{city ? city : "Desconocida"}</p>

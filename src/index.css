@@ -68,8 +68,8 @@ body {
 }
 
 [data-theme="dark"] {
-  --jea-color-bg: #111015;
-  --jea-color-bgCards: #1b1b1d;
+  --jea-color-bg: #202020;
+  --jea-color-bgCards: #333333;
   --jea-color-bgSpecial: #bbd7ec;
   --jea-color-items: #bad4eb;
   --jea-color-font: #ffffff;
