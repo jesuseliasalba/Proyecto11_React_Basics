@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 400;
+  color: var(--jea-color-font);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+:root {
+  /* COLORS */
+  --jea-color-bg: #ececec;
+  --jea-color-bgCards: #cbcbcb;
+  --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-items: #6ab9ff;
+  --jea-color-font: #000000;
+  --jea-color-button: #d9d9d9;
+
+  /* FONT SIZES */
+  --jea-font-xl: 36px;
+  --jea-font-l: 20px;
+  --jea-font-m: 16px;
+  --jea-font-s: 12px;
+  --jea-font-xs: 10px;
+
+  /* SPACINGS */
+
+  /* RADIUS */
+  --jea-radius-primary: 20px;
+  --jea-radius-secundary: 10px;
+  --jea-radius-buttons: 5px;
+
+  /* PADDING */
+  --jea-padding-xs: 5px;
+  --jea-padding-s: 10px;
+  --jea-padding-m: 20px;
+  --jea-padding-l: 40px;
+  --jea-padding-xl: 50px;
+
+  /* MARGIN */
+  --jea-margin-s: 10px;
+  --jea-margin-m: 20px;
+  --jea-margin-l: 30px;
+  --jea-margin-xl: 40px;
+
+  /* GAP */
+  --jea-gap-s: 5px;
+  --jea-gap-m: 10px;
+  --jea-gap-l: 15px;
+  --jea-gap-xl: 25px;
+}
+
+[data-theme="dark"] {
+  --jea-color-bg: #111015;
+  --jea-color-bgCards: #1b1b1d;
+  --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-items: #bad4eb;
+  --jea-color-font: #ffffff;
+  --jea-color-button: #d9d9d9;
+}
