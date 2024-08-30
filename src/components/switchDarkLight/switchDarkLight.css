@@ -1,3 +1,7 @@
+#theme-toggle-button > input {
+  display: none;
+}
+
 /* From Uiverse.io by rishichawda */
 /* The switch - the box around the slider */
 #theme-toggle-button {

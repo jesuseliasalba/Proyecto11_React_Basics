@@ -1,3 +1,17 @@
 header {
-  background-color: var(--jea-color-bg);
+  justify-content: space-around !important;
+  padding: var(--jea-padding-xs);
+  position: relative;
+}
+
+.divCity {
+  gap: var(--jea-gap-s);
+}
+
+@media (max-width: 750px) {
+  header.displayFlex-row {
+    flex-direction: column;
+    gap: var(--jea-gap-m);
+    padding-top: var(--jea-padding-s);
+  }
 }

@@ -22,6 +22,7 @@ a {
 
 body {
   min-height: 100dvh;
+  background-color: var(--jea-color-bg);
 }
 
 :root {
@@ -51,8 +52,8 @@ body {
   --jea-padding-xs: 5px;
   --jea-padding-s: 10px;
   --jea-padding-m: 20px;
-  --jea-padding-l: 40px;
-  --jea-padding-xl: 50px;
+  --jea-padding-l: 30px;
+  --jea-padding-xl: 40px;
 
   /* MARGIN */
   --jea-margin-s: 10px;
@@ -67,6 +68,8 @@ body {
   --jea-gap-xl: 25px;
 }
 
+/*! @media (max-width: 750px) { */
+
 [data-theme="dark"] {
   --jea-color-bg: #202020;
   --jea-color-bgCards: #333333;
@@ -74,4 +77,11 @@ body {
   --jea-color-items: #bad4eb;
   --jea-color-font: #ffffff;
   --jea-color-button: #d9d9d9;
+}
+
+.displayFlex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }

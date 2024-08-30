@@ -1,0 +1,32 @@
+.input-group {
+  position: relative;
+  width: 40svw;
+}
+
+.input-group > i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-group > input {
+  text-align: start;
+  padding: var(--jea-padding-s);
+  padding-left: var(--jea-padding-l);
+  background-color: var(--jea-color-bgCards);
+  border-radius: var(--jea-radius-secundary);
+  border: none;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--jea-color-font);
+  opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .input-group {
+    width: 70svw;
+  }
+}
