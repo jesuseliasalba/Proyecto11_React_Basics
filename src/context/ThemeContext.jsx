@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext();
 
-const initialTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? "light" : "dark";
+const initialTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : window.matchMedia('(prefers-color-scheme: light)').matches ? "light" : "dark";
 
 const ThemeProvider = ({children}) => {
 
@@ -19,13 +19,12 @@ const ThemeProvider = ({children}) => {
     useEffect(() => {
 
         document.body.setAttribute('data-theme', theme);
+        localStorage.setItem("theme", theme ? theme : "light")
 
     }, [theme]);
 
-    const data = {theme, handleTheme}
-
     return (
-        <ThemeContext.Provider value={data} >{children}</ThemeContext.Provider>
+        <ThemeContext.Provider value={{theme, handleTheme}} >{children}</ThemeContext.Provider>
     )
 }
 
