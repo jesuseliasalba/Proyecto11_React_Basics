@@ -79,9 +79,39 @@ body {
   --jea-color-button: #d9d9d9;
 }
 
-.displayFlex-row {
+.displayFlex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.row {
   flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5px;
+  }
 }

@@ -1,0 +1,25 @@
+.topContent {
+  height: 300px;
+}
+
+.timeTown {
+  flex: 3;
+  height: 100%;
+}
+
+.rainChance {
+  height: 100%;
+  flex: 1;
+  background-color: red;
+}
+
+.optionsTime.displayFlex {
+  height: 30px;
+  width: 100%;
+  padding: var(--jea-padding-xs);
+  justify-content: space-between;
+}
+
+.timeDays {
+  height: 270px;
+}
