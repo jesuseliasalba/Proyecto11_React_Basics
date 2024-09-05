@@ -1,17 +1,24 @@
 header {
   justify-content: space-around !important;
   padding: var(--jea-padding-xs);
+  padding-top: var(--jea-padding-s);
   position: relative;
 }
 
 .divCity {
   gap: var(--jea-gap-s);
+  padding-bottom: 10px;
 }
 
 @media (max-width: 750px) {
   header.displayFlex-row {
     flex-direction: column;
     gap: var(--jea-gap-m);
-    padding-top: var(--jea-padding-s);
+    padding-top: var(--jea-padding-m);
+  }
+  header.displayFlex-row > label {
+    position: absolute !important;
+    top: 5px;
+    right: 10px;
   }
 }
