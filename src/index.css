@@ -32,6 +32,7 @@ body {
   --jea-color-bgSpecial: #bbd7ec;
   --jea-color-items: #6ab9ff;
   --jea-color-font: #000000;
+  --jea-color-desactive: #5c5c5c;
   --jea-color-button: #d9d9d9;
 
   /* FONT SIZES */
@@ -56,6 +57,7 @@ body {
   --jea-padding-xl: 40px;
 
   /* MARGIN */
+  --jea-margin-xs: 5px;
   --jea-margin-s: 10px;
   --jea-margin-m: 20px;
   --jea-margin-l: 30px;
@@ -76,6 +78,7 @@ body {
   --jea-color-bgSpecial: #bbd7ec;
   --jea-color-items: #bad4eb;
   --jea-color-font: #ffffff;
+  --jea-color-desactive: #636363;
   --jea-color-button: #d9d9d9;
 }
 

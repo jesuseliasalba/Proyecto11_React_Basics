@@ -1,0 +1,28 @@
+.cityCont.displayFlex {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  border-radius: 0px 0px var(--jea-radius-secundary) var(--jea-radius-secundary);
+  background-color: var(--jea-color-bgCards);
+  animation: showCitys 0.3s;
+}
+
+.cityCont > span {
+  width: 100%;
+  text-align: start;
+  padding: var(--jea-padding-s);
+  margin: var(--jea-margin-xs);
+  cursor: pointer;
+}
+
+@keyframes showCitys {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

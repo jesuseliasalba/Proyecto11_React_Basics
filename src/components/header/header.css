@@ -9,6 +9,10 @@ header.displayFlex {
   padding-bottom: 10px;
 }
 
+.inputSuggestions {
+  position: relative;
+}
+
 @media (max-width: 750px) {
   header.displayFlex {
     flex-direction: column;

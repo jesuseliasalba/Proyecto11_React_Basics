@@ -1,4 +1,4 @@
-import ThemeContext from "../../context/ThemeContext";
+import ThemeContext from "../../providers/ThemeContext";
 import "./switchDarkLight.css"
 
 import React, { useContext } from "react";
