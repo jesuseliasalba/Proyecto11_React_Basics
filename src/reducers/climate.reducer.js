@@ -15,6 +15,11 @@ export const climateReducer = (state, action) => {
         ...state,
         city: action.payload,
       };
+    case "ADD_CITY_CACH":
+      return {
+        ...state,
+        cachedCities: action.payload,
+      };
     default:
       return state;
   }

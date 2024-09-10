@@ -1,0 +1,37 @@
+.timeTown {
+  flex: 3;
+  height: 100%;
+}
+
+.optionsTime.displayFlex {
+  height: 30px;
+  width: 100%;
+  padding: var(--jea-padding-xs);
+  justify-content: space-between;
+}
+
+.optionsTime > ul {
+  gap: var(--jea-gap-m);
+  cursor: pointer;
+}
+
+.optionsTime li {
+  color: var(--jea-color-desactive);
+}
+
+li.activeTime {
+  font-weight: 500;
+  color: var(--jea-color-font);
+}
+
+.timeDays {
+  height: 270px;
+  width: 100%;
+}
+
+.timeDays > div {
+  flex: 1;
+}
+.timeDays > div:hover {
+  flex: 3;
+}

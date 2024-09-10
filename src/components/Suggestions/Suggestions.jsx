@@ -1,7 +1,9 @@
 import { API } from "../../API/API"
+import { ClimateContext } from "../../providers/ClimateProvider";
+import { setCity } from "../../reducers/climate.actions";
 import "./Suggestions.css"
 
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 const fetchData = async ({setSuggest, inputValue}) => {
             try {
@@ -15,16 +17,42 @@ const fetchData = async ({setSuggest, inputValue}) => {
 const Suggestions = ({inputValue, setInputValue}) => {
 
     const [suggest, setSuggest] = useState([])
+    // const [titlePage, setTitlePage] = useState("")
+    const {state, dispatch} = useContext(ClimateContext)
+    
+    //! Cuando se busque el tiempo de un sitio que se ponga en el título, HAY QUE HACERLO
+    //TODO NO FUNCIONA T_T NO LE PUEDO PASAR NADA DESDE EL ONCLICK :(
+    //useEffect(()=>{
+    //  document.title = `YourTime ${titlePage ? `- ${titlePage}`: ""}` 
+    //  console.log(titlePage);
+    //     
+    //},[titlePage])
 
     useEffect(() => {
-        fetchData({setSuggest, inputValue})
+        const timeout = setTimeout(() => {
+            fetchData({setSuggest, inputValue})
+        }, 500);
+        return () => clearTimeout(timeout)
     }, [inputValue]) 
 
     return (
     <div className="cityCont displayFlex column">
         {suggest && suggest.map((city) => {
-            return <span key={city.id} onClick={(e) => setInputValue(e.target.innerHTML)}>{city.name}{city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}{city.country ? `, ${city.country}` : ""}</span>
-        } )}
+            return <span key={city.id} 
+                        onClick={() => {
+                            setInputValue(""); 
+                            setCity({
+                                state, 
+                                dispatch, 
+                                coords: {
+                                    lat: city.latitude, 
+                                    lon: city.longitude
+                    }})}}>
+                        {city.name}
+                        {city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}
+                        {city.country ? `, ${city.country}` : ""}
+                    </span>
+        })}
     </div>
   )
 }
