@@ -1,3 +1,11 @@
 .topContent {
   height: 300px;
+  padding-top: var(--jea-padding-m);
+}
+
+@media (max-width: 940px) {
+  .topContent {
+    padding-top: var(--jea-padding-s);
+    flex-direction: column;
+  }
 }

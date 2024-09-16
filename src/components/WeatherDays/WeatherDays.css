@@ -1,6 +1,7 @@
 .timeTown {
   flex: 3;
   height: 100%;
+  width: 90%;
 }
 
 .optionsTime.displayFlex {
@@ -27,11 +28,13 @@ li.activeTime {
 .timeDays {
   height: 270px;
   width: 100%;
+  gap: var(--jea-gap-l);
+  padding: var(--jea-padding-s);
 }
 
-.timeDays > div {
-  flex: 1;
-}
-.timeDays > div:hover {
-  flex: 3;
+@media (max-width: 750px) {
+  .timeDays {
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
 }

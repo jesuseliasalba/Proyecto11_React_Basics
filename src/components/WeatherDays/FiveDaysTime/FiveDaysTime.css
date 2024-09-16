@@ -1,0 +1,31 @@
+.dayTime {
+  flex: 1;
+  height: 90%;
+  background-color: var(--jea-color-bgCards);
+  border-radius: var(--jea-radius-primary);
+  justify-content: space-around;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.daySelected {
+  flex: 2;
+  background-color: var(--jea-color-bgSpecial);
+  height: 100%;
+  overflow: hidden;
+  cursor: auto;
+  min-width: 210px;
+}
+
+.daySelected * {
+  font-weight: 600;
+  color: black;
+}
+
+@media (max-width: 750px) {
+  .dayTime {
+    width: 100px;
+  }
+  .daySelected {
+  }
+}

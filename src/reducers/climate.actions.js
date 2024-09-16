@@ -6,7 +6,7 @@ export const setCity = async ({ state, dispatch, coords }) => {
   const { lat, lon } = coords;
   try {
     const res = await API({
-      url: `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,precipitation,rain,weather_code,is_day,sunshine_duration&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,daylight_duration,precipitation_sum,rain_sum,showers_sum,snowfall_sum`,
+      url: `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&hourly=temperature_2m,apparent_temperature,precipitation_probability,rain,weather_code,cloud_cover,visibility&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,daylight_duration,uv_index_max,precipitation_sum,rain_sum,precipitation_hours,wind_speed_10m_max&timezone=Europe%2FBerlin`,
     });
     dispatch({ type: "SET_CITY", payload: res });
     addCityCach({ state, dispatch, city: res });
@@ -34,3 +34,5 @@ const addCityCach = ({ state, dispatch, city }) => {
     dispatch({ type: "ADD_CITY_CACH", payload: cachedCities });
   }
 };
+
+export const chooseDayInfo = ({ dispatch }) => {};

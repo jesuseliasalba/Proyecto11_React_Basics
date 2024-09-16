@@ -30,8 +30,10 @@ body {
   --jea-color-bg: #ececec;
   --jea-color-bgCards: #cbcbcb;
   --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-bgSpecial-secundary: #aecadf;
   --jea-color-items: #6ab9ff;
   --jea-color-font: #000000;
+  --jea-color-font-special: #4f5658;
   --jea-color-desactive: #5c5c5c;
   --jea-color-button: #d9d9d9;
 
@@ -76,8 +78,10 @@ body {
   --jea-color-bg: #202020;
   --jea-color-bgCards: #333333;
   --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-bgSpecial-secundary: #aecadf;
   --jea-color-items: #bad4eb;
   --jea-color-font: #ffffff;
+  --jea-color-font-special: #4f5658;
   --jea-color-desactive: #636363;
   --jea-color-button: #d9d9d9;
 }

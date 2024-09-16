@@ -46,8 +46,8 @@ const Suggestions = ({inputValue, setInputValue}) => {
                                 dispatch, 
                                 coords: {
                                     lat: city.latitude, 
-                                    lon: city.longitude
-                    }})}}>
+                                    lon: city.longitude}
+                                })}}>
                         {city.name}
                         {city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}
                         {city.country ? `, ${city.country}` : ""}

@@ -1,0 +1,38 @@
+.dayName {
+  height: 20%;
+  width: 100%;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--jea-color-bgCards);
+  background-color: var(--jea-color-bgSpecial-secundary);
+}
+
+.tempImg,
+.dayInfo {
+  padding: var(--jea-padding-s);
+  padding-top: var(--jea-padding-m);
+}
+
+.tempImg {
+  height: 30%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tempImg > p {
+  font-size: 2rem;
+  width: 100px;
+}
+
+.dayInfo {
+  height: 50%;
+  width: 90%;
+}
+
+.dayInfo * {
+  font-size: 0.9rem;
+  text-align: start;
+}
+
+.dayInfo span {
+  color: var(--jea-color-font-special);
+}

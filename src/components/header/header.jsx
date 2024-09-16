@@ -11,7 +11,7 @@ const Header = () => {
 
   const [cityLocation, setCityLocation] = useState("");
   const [inputValue, setInputValue] = useState("");
-  const { state, dispatch } = useContext(ClimateContext);
+  const { state, dispatch } = useContext(ClimateContext);  
 
   //useEffect(() => {
   //  navigator.geolocation.getCurrentPosition(
