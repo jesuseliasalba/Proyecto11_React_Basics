@@ -12,6 +12,7 @@ svg.loading > circle {
   stroke-dashoffset: 0;
   stroke-linecap: round;
   animation: dash4 1.5s ease-in-out infinite;
+  filter: brightness(100);
 }
 
 @keyframes rotate4 {

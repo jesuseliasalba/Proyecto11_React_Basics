@@ -1,16 +1,12 @@
-import { ClimateContext } from "../../../providers/ClimateProvider"
 import Loading from "../../Loading/Loading"
 import WeatherDay from "../../WeatherDay/WeatherDay"
 import "./FiveDaysTime.css"
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 
-const FiveDaysTime = () => {
+const FiveDaysTime = ({city, loading}) => {
 
   const [daySelect, setDaySelect] = useState(0);
-
-  const { state } = useContext(ClimateContext)
-  const { loading, city } = state
-
+  
   const blocks = []
   for (let i = 0; i < 5; i++) {
       blocks.push(

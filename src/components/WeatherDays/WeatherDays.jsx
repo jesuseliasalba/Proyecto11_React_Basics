@@ -1,12 +1,21 @@
+import { ClimateContext } from "../../providers/ClimateProvider";
 import FiveDaysTime from "./FiveDaysTime/FiveDaysTime";
-import TodayTime from "./TodayTime/TodayTime";
-import TomorrowTime from "./TomorrowTime/TomorrowTime";
+import OneDayTime from "./OneDayTime/OneDayTime";
 import "./WeatherDays.css"
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 const WeatherDays = () => {
-    const [ activeOption, setActive ] = useState("option3");
+  const [ activeOption, setActive ] = useState("option1");
+  const { state } = useContext(ClimateContext);
+  const { city, loading } = state;
+  
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setMinutes(0,0,0)
+  
+  const position = city.minutely_15?.time.indexOf(tomorrow.toLocaleString('sv-SE', { hour12: false }).replace(' ', 'T').slice(0, 16))
+  
 
   return (
     <div className='timeTown displayFlex column'>
@@ -18,9 +27,9 @@ const WeatherDays = () => {
         </ul>
       </div>
       <div className='timeDays displayFlex row'>
-        {activeOption === "option1" && <TodayTime />}
-        {activeOption === "option2" && <TomorrowTime />}
-        {activeOption === "option3" && <FiveDaysTime />}
+        {activeOption === "option1" && <OneDayTime value={city.current} units={city.current_units} loading={loading}/>}
+        {activeOption === "option2" && <OneDayTime value={city.minutely_15} units={city.minutely_15_units} position={position} loading={loading} />}
+        {activeOption === "option3" && <FiveDaysTime city={city} loading={loading} />}
       </div>
     </div>
   )

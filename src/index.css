@@ -30,6 +30,7 @@ body {
   --jea-color-bg: #ececec;
   --jea-color-bgCards: #cbcbcb;
   --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-bgSpecial-opacity: #bbd7ecdc;
   --jea-color-bgSpecial-secundary: #74acd4;
   --jea-color-items: #6ab9ff;
   --jea-color-font: #000000;
@@ -78,6 +79,7 @@ body {
   --jea-color-bg: #202020;
   --jea-color-bgCards: #333333;
   --jea-color-bgSpecial: #bbd7ec;
+  --jea-color-bgSpecial-opacity: #bbd7ecdc;
   --jea-color-bgSpecial-secundary: #74acd4;
   --jea-color-items: #bad4eb;
   --jea-color-font: #ffffff;

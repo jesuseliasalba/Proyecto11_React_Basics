@@ -33,7 +33,10 @@ li.activeTime {
 }
 
 @media (max-width: 750px) {
-  .timeDays {
+  .timeTown {
+    width: 95%;
+  }
+  .timeDays:has(.dayTime) {
     overflow-x: scroll;
     justify-content: flex-start;
   }

@@ -14,19 +14,19 @@ const fetchData = async ({setSuggest, inputValue}) => {
             }
         }
 
-const Suggestions = ({inputValue, setInputValue}) => {
+const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
 
     const [suggest, setSuggest] = useState([])
-    // const [titlePage, setTitlePage] = useState("")
     const {state, dispatch} = useContext(ClimateContext)
     
     //! Cuando se busque el tiempo de un sitio que se ponga en el título, HAY QUE HACERLO
     //TODO NO FUNCIONA T_T NO LE PUEDO PASAR NADA DESDE EL ONCLICK :(
-    //useEffect(()=>{
-    //  document.title = `YourTime ${titlePage ? `- ${titlePage}`: ""}` 
-    //  console.log(titlePage);
-    //     
-    //},[titlePage])
+    // const [titlePage, setTitlePage] = useState("")
+    // useEffect(()=>{
+    //   document.title = `YourTime ${titlePage}` 
+    //   console.log(titlePage);
+    //      
+    // },[titlePage])
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -38,8 +38,9 @@ const Suggestions = ({inputValue, setInputValue}) => {
     return (
     <div className="cityCont displayFlex column">
         {suggest && suggest.map((city) => {
-            return <span key={city.id} 
+            return <p key={city.id} 
                         onClick={() => {
+                            setCityLocation(`${city.name}, ${city.admin2 && city.admin2 !== city.name ? city.admin2 : city.country}`)
                             setInputValue(""); 
                             setCity({
                                 state, 
@@ -51,7 +52,7 @@ const Suggestions = ({inputValue, setInputValue}) => {
                         {city.name}
                         {city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}
                         {city.country ? `, ${city.country}` : ""}
-                    </span>
+                    </p>
         })}
     </div>
   )

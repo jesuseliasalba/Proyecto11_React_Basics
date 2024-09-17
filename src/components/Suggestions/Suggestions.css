@@ -4,10 +4,11 @@
   width: 100%;
   border-radius: 0px 0px var(--jea-radius-secundary) var(--jea-radius-secundary);
   background-color: var(--jea-color-bgCards);
-  animation: showCitys 0.3s;
+  animation-name: showCitys;
+  animation-duration: 1s;
 }
 
-.cityCont > span {
+.cityCont > p {
   width: 100%;
   text-align: start;
   padding: var(--jea-padding-s);
@@ -19,8 +20,8 @@
   0% {
     opacity: 0;
   }
-  70% {
-    opacity: 0.6;
+  50% {
+    opacity: 0.2;
   }
   100% {
     opacity: 1;

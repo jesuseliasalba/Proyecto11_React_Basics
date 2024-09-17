@@ -1,4 +1,4 @@
-.dayName {
+.dayTime .dayName {
   height: 20%;
   width: 100%;
   font-size: 1.5rem;
@@ -6,33 +6,33 @@
   background-color: var(--jea-color-bgSpecial-secundary);
 }
 
-.tempImg,
-.dayInfo {
+.dayTime .tempImg,
+.dayTime .dayInfo {
   padding: var(--jea-padding-s);
-  padding-top: var(--jea-padding-m);
 }
 
-.tempImg {
+.dayTime .tempImg {
   height: 30%;
   width: 100%;
   justify-content: space-between;
 }
 
-.tempImg > p {
+.dayTime .tempImg > p {
   font-size: 2rem;
   width: 100px;
 }
 
-.dayInfo {
+.dayTime .dayInfo {
   height: 50%;
   width: 90%;
+  padding-top: 0;
 }
 
-.dayInfo * {
+.dayTime .dayInfo * {
   font-size: 0.9rem;
   text-align: start;
 }
 
-.dayInfo span {
+.dayTime .dayInfo span {
   color: var(--jea-color-font-special);
 }
