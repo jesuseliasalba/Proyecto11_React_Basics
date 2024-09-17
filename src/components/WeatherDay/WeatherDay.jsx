@@ -12,7 +12,7 @@ const WeatherDay = ({position, city, active}) => {
     const today = new Date()
     const day = today.getDay()  
 
-    console.log(daily);
+    console.log(day);
     
 
   return (

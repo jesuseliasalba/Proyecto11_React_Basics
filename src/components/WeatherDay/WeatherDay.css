@@ -2,7 +2,7 @@
   height: 20%;
   width: 100%;
   font-size: 1.5rem;
-  border-bottom: 2px solid var(--jea-color-bgCards);
+  border-bottom: 2px solid var(--jea-color-font-special);
   background-color: var(--jea-color-bgSpecial-secundary);
 }
 
