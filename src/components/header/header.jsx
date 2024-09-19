@@ -13,18 +13,18 @@ const Header = () => {
   const [inputValue, setInputValue] = useState("");
   const { state, dispatch } = useContext(ClimateContext);  
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const res = await API({url: `https://us1.locationiq.com/v1/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json&key=pk.e65df5358c57261e3f376d4caf32a11b`, headers: {accept: 'application/json'}});
-        setCityLocation(`${res.address.city}, ${res.address.country}`)
-        setCity({state, dispatch, coords: {lat:res.lat, lon:res.lon}})        
-      }, async () => {
-        const res = await API({url: 'https://api.ipdata.co/?api-key=298683c76a6c6bee1a5970f2e90d478413ba4c45b55d28c87093b610', headers: {accept: 'application/json'}})
-        setCityLocation(`${res.city !== null ? `${res.city}, ` : ""} ${res.country_name}`)
-        setCity({state, dispatch, coords: {lat:res.latitude, lon:res.longitude}})
-      })
-  }, [])   
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(
+  //     async (position) => {
+  //       const res = await API({url: `https://us1.locationiq.com/v1/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json&key=pk.//e65df5358c57261e3f376d4caf32a11b`, headers: {accept: 'application/json'}});
+  //       setCityLocation(`${res.address.city}, ${res.address.country}`)
+  //       setCity({state, dispatch, coords: {lat:res.lat, lon:res.lon}})        
+  //     }, async () => {
+  //       const res = await API({url: 'https://api.ipdata.co/?api-key=298683c76a6c6bee1a5970f2e90d478413ba4c45b55d28c87093b610', headers: {accept: 'application/json'}})
+  //       setCityLocation(`${res.city !== null ? `${res.city}, ` : ""} ${res.country_name}`)
+  //       setCity({state, dispatch, coords: {lat:res.latitude, lon:res.longitude}})
+  //     })
+  // }, [])   
 
   return (
     

@@ -7,5 +7,6 @@
   .topContent {
     padding-top: var(--jea-padding-s);
     flex-direction: column;
+    height: auto;
   }
 }

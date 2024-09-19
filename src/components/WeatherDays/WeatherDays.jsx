@@ -7,6 +7,7 @@ import React, { useContext, useState } from 'react'
 
 const WeatherDays = () => {
   const [ activeOption, setActive ] = useState("option1");
+  
   const { state } = useContext(ClimateContext);
   const { city, loading } = state;
   

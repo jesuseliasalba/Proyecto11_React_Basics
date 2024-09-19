@@ -1,5 +1,14 @@
 .rainChance {
   height: 100%;
   flex: 1;
-  background-color: red;
+}
+
+.rainChance .recharts-tooltip-item-list span {
+  color: black;
+}
+
+@media (max-width: 940px) {
+  .rainChance {
+    width: 90%;
+  }
 }
