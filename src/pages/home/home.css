@@ -3,10 +3,36 @@
   padding-top: var(--jea-padding-m);
 }
 
+.bottomContent {
+  height: calc(100vh - 380px);
+}
+
+.bottomContent > div {
+  height: 100%;
+}
+
+.leftContent {
+  flex: 2;
+  background-color: red;
+}
+
+.middleContent {
+  flex: 2;
+}
+
+.rightContent {
+  flex: 1;
+}
+
 @media (max-width: 940px) {
   .topContent {
-    padding-top: var(--jea-padding-s);
-    flex-direction: column;
     height: auto;
+    flex-direction: column;
+    padding-top: var(--jea-padding-s);
+  }
+
+  .bottomContent {
+    height: auto;
+    flex-direction: column;
   }
 }

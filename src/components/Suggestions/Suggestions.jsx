@@ -26,7 +26,7 @@ const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
     //   document.title = `YourTime ${titlePage}` 
     //   console.log(titlePage);
     //      
-    // },[titlePage])
+    // }, [titlePage])
 
     useEffect(() => {
         const timeout = setTimeout(() => {

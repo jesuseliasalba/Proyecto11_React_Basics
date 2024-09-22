@@ -6,6 +6,7 @@
   background-color: var(--jea-color-bgCards);
   animation-name: showCitys;
   animation-duration: 1s;
+  z-index: 10;
 }
 
 .cityCont > p {
