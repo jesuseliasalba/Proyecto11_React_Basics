@@ -18,15 +18,7 @@ const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
 
     const [suggest, setSuggest] = useState([])
     const {state, dispatch} = useContext(ClimateContext)
-    
-    //! Cuando se busque el tiempo de un sitio que se ponga en el título, HAY QUE HACERLO
-    //TODO NO FUNCIONA T_T NO LE PUEDO PASAR NADA DESDE EL ONCLICK :(
-    // const [titlePage, setTitlePage] = useState("")
-    // useEffect(()=>{
-    //   document.title = `YourTime ${titlePage}` 
-    //   console.log(titlePage);
-    //      
-    // }, [titlePage])
+
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -40,14 +32,16 @@ const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
         {suggest && suggest.map((city) => {
             return <p key={city.id} 
                         onClick={() => {
-                            setCityLocation(`${city.name}, ${city.admin2 && city.admin2 !== city.name ? city.admin2 : city.country}`)
+                            setCityLocation(`${city.name}, ${city.admin2 && city.admin2 !== city.name ? city.admin2 : city.country}`) 
                             setInputValue(""); 
                             setCity({
                                 state, 
                                 dispatch, 
                                 coords: {
                                     lat: city.latitude, 
-                                    lon: city.longitude}
+                                    lon: city.longitude,
+                                    name: city.name,
+                                }
                                 })}}>
                         {city.name}
                         {city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}

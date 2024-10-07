@@ -2,6 +2,7 @@ import React from 'react'
 import "./home.css"
 import WeatherDays from '../../components/WeatherDays/WeatherDays';
 import WeatherRain from '../../components/WeatherRain/WeatherRain';
+import MapPreview from '../../components/mapPreview/mapPreview';
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
           {/* <TodaysInfo /> */}
         </div>
         <div className='middleContent'>
-          {/* <Api Google Maps /> */}
+          <MapPreview />
         </div>
         <div className='rightContent'>
           {/* <Historical /> */}

@@ -1,10 +1,12 @@
 .topContent {
   height: 300px;
   padding-top: var(--jea-padding-m);
+  padding-bottom: var(--jea-padding-m);
 }
 
 .bottomContent {
   height: calc(100vh - 380px);
+  gap: var(--jea-margin-m);
 }
 
 .bottomContent > div {
@@ -12,12 +14,14 @@
 }
 
 .leftContent {
-  flex: 2;
+  flex: 1.5;
   background-color: red;
 }
 
 .middleContent {
-  flex: 2;
+  flex: 1.5;
+  border-radius: var(--jea-radius-secundary);
+  overflow: hidden;
 }
 
 .rightContent {

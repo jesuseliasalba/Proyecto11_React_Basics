@@ -15,7 +15,8 @@ const OneDayTime = ({value, units, position, loading}) => {
   return (
     <div className={"oneDay displayFlex column " + (value?.is_day === 0 ? "night" : "day")}>
       <div className="oneDayContent displayFlex column">
-        {loading ? <Loading /> : (<>
+        {loading ? <Loading /> : 
+        (<>
           <div className="tempImg displayFlex row">
             <p>{value?.temperature_2m} {units?.temperature_2m}</p>
             <img src={wmo[value?.weather_code]?.image} alt={wmo[value?.weather_code]?.description} />
@@ -28,7 +29,7 @@ const OneDayTime = ({value, units, position, loading}) => {
             <p><span>Lluvia:</span> {value?.rain} {units?.rain}</p>
             <p><span>Nieve:</span> {value?.snowfall} {units?.snowfall}</p>
           </div>
-          </>)
+        </>)
         }
       </div>
     </div>
