@@ -10,7 +10,7 @@ const WeatherDays = () => {
   
   const { state } = useContext(ClimateContext);
   const { city, loading } = state;
-  
+
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
   tomorrow.setMinutes(0,0,0)

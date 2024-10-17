@@ -26,6 +26,10 @@
 
 .rightContent {
   flex: 1;
+  background-color: var(--jea-color-bgCards);
+  padding: var(--jea-padding-xs);
+  border-radius: var(--jea-radius-secundary);
+  overflow-y: scroll;
 }
 
 @media (max-width: 940px) {
@@ -38,5 +42,13 @@
   .bottomContent {
     height: auto;
     flex-direction: column;
+  }
+
+  .middleContent {
+    width: 90%;
+  }
+  .rightContent {
+    width: 90%;
+    margin-bottom: var(--jea-margin-l);
   }
 }

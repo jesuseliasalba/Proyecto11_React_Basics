@@ -2,6 +2,7 @@ export const CLIMATE_INITIAL = {
   loading: false,
   city: {},
   cachedCities: [],
+  cityName: "",
 };
 
 export const climateReducer = (state, action) => {
@@ -13,8 +14,9 @@ export const climateReducer = (state, action) => {
     case "SET_CITY":
       return {
         ...state,
-        city: action.payload,
-        cachedCities: new Set([...state.cachedCities, action.payload]),
+        city: action.payload.res,
+        cachedCities: [...state.cachedCities, action.payload.resName],
+        cityName: action.payload.cityName,
       };
     default:
       return state;

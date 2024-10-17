@@ -6,3 +6,9 @@
 .mapCont * {
   color: black;
 }
+
+@media (max-width: 940px) {
+  .mapCont {
+    height: 400px;
+  }
+}

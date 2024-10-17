@@ -14,10 +14,10 @@ const fetchData = async ({setSuggest, inputValue}) => {
             }
         }
 
-const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
+const Suggestions = ({inputValue, setInputValue}) => {
 
     const [suggest, setSuggest] = useState([])
-    const {state, dispatch} = useContext(ClimateContext)
+    const { dispatch } = useContext(ClimateContext)
 
 
     useEffect(() => {
@@ -32,16 +32,15 @@ const Suggestions = ({inputValue, setInputValue, setCityLocation}) => {
         {suggest && suggest.map((city) => {
             return <p key={city.id} 
                         onClick={() => {
-                            setCityLocation(`${city.name}, ${city.admin2 && city.admin2 !== city.name ? city.admin2 : city.country}`) 
                             setInputValue(""); 
                             setCity({
-                                state, 
                                 dispatch, 
                                 coords: {
                                     lat: city.latitude, 
                                     lon: city.longitude,
-                                    name: city.name,
-                                }
+                                },
+                                name: city.name,
+                                cityName: `${city.name}, ${city.admin2 && city.admin2 !== city.name ? city.admin2 : city.country}`,
                                 })}}>
                         {city.name}
                         {city.admin2 && city.admin2 !== city.name ? `, ${city.admin2}` : ""}

@@ -1,0 +1,27 @@
+.history {
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.history > li {
+  padding: var(--jea-padding-s);
+}
+
+.history > li:first-child {
+  font-weight: 600;
+}
+
+.history > li:not(:first-child) {
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: var(--jea-color-button);
+  color: black;
+  border-radius: var(--jea-radius-secundary);
+  margin: var(--jea-margin-xs);
+}
+
+.history > #space {
+  background-color: transparent;
+}
