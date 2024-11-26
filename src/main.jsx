@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from "./pages/home/home.jsx"
 import { ThemeProvider } from './providers/ThemeContext.jsx'
 import ClimateProvider from './providers/ClimateProvider.jsx'
+import NotFound from './pages/NotFound/notFound.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,7 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={ <App/> } >
             <Route index element={ <Home/> } />      
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
