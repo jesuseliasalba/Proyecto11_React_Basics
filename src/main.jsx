@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from "./pages/home/home.jsx"
 import { ThemeProvider } from './providers/ThemeContext.jsx'
 import ClimateProvider from './providers/ClimateProvider.jsx'
-import NotFound from './pages/NotFound/notFound.jsx'
+import NotFound from './pages/notFound/notFound.jsx'
 
 
 createRoot(document.getElementById('root')).render(
