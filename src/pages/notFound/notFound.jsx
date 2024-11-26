@@ -1,7 +1,7 @@
 import React from 'react'
 import "./NotFound.css"
 
-const NotFound = () => {
+const notFound = () => {
   return (
     <div className="container NotFound displayFlex">
       Ruta desconocida
@@ -9,4 +9,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default notFound
