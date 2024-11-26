@@ -1,21 +1,16 @@
 .topContent {
   height: 300px;
   padding-top: var(--jea-padding-m);
-  padding-bottom: var(--jea-padding-m);
+  margin-bottom: var(--jea-padding-m);
 }
 
 .bottomContent {
-  height: calc(100vh - 380px);
+  height: calc(100vh - 400px);
   gap: var(--jea-margin-m);
 }
 
 .bottomContent > div {
   height: 100%;
-}
-
-.leftContent {
-  flex: 1.5;
-  background-color: red;
 }
 
 .middleContent {
@@ -24,11 +19,19 @@
   overflow: hidden;
 }
 
+.leftContent,
 .rightContent {
-  flex: 1;
   background-color: var(--jea-color-bgCards);
   padding: var(--jea-padding-xs);
   border-radius: var(--jea-radius-secundary);
+}
+
+.leftContent {
+  flex: 1.5;
+}
+
+.rightContent {
+  flex: 1;
   overflow-y: scroll;
 }
 
@@ -42,6 +45,10 @@
   .bottomContent {
     height: auto;
     flex-direction: column;
+  }
+
+  .leftContent {
+    width: 90%;
   }
 
   .middleContent {

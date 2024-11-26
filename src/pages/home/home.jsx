@@ -4,6 +4,7 @@ import WeatherDays from '../../components/WeatherDays/WeatherDays';
 import WeatherRain from '../../components/WeatherRain/WeatherRain';
 import MapPreview from '../../components/mapPreview/mapPreview';
 import SearchHistory from '../../components/SearchHistory/SearchHistory';
+import TodaysInfo from '../../components/TodaysInfo/TodaysInfo';
 
 const Home = () => {
 
@@ -15,8 +16,7 @@ const Home = () => {
       </section>
       <section className='container displayFlex row bottomContent'>
         <div className='leftContent'>
-          {/* <TodaysInfo /> */}
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro omnis quas nulla harum voluptate et veritatis neque deleniti quos ipsa fugit, vel tempora illo voluptatibus blanditiis doloremque, consequatur eveniet! Labore.</p>
+          <TodaysInfo />
         </div>
         <div className='middleContent'>
           <MapPreview />

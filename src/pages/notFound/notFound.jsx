@@ -1,10 +1,12 @@
 import React from 'react'
-import "./notFound.css"
+import "./NotFound.css"
 
-const notFound = () => {
+const NotFound = () => {
   return (
-    <div>notFound</div>
+    <div className="container NotFound displayFlex">
+      Ruta desconocida
+    </div>
   )
 }
 
-export default notFound
+export default NotFound

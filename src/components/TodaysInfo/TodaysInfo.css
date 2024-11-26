@@ -1,0 +1,27 @@
+.uvInfo {
+  height: 50%;
+}
+
+.windInfo {
+  height: 50%;
+}
+
+.uvInfo > p,
+.windInfo > p {
+  font-weight: 600;
+  padding-top: var(--jea-padding-s);
+}
+
+.custom-tooltip * {
+  color: black;
+}
+
+.custom-tooltip :first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 940px) {
+  .rainChance {
+    width: 90%;
+  }
+}
