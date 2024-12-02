@@ -13,10 +13,14 @@ export const setCity = async ({ dispatch, coords, name, cityName }) => {
       headers: { accept: "application/json" },
     });
 
-    dispatch({ type: "SET_CITY", payload: { res, resName, cityName } });
-    document.title = `YourTime - ${
-      name || resName.address.city || resName.address.town || "🌍"
-    }`;
+    const { error } = resName;
+
+    if (!error) {
+      dispatch({ type: "SET_CITY", payload: { res, resName, cityName } });
+      document.title = `YourTime - ${
+        name || resName.address.city || resName.address.town || "🌍"
+      }`;
+    }
   } catch (error) {
     console.error("Error fetching City " + error);
   } finally {

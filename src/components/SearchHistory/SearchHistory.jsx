@@ -20,9 +20,9 @@ const SearchHistory = () => {
         <li>Historial:</li>
         { loading ? <Loading /> : 
           cities?.toReversed().map((city, index) => {
-            return <li key={index} onClick={() => {setCity({dispatch,coords: { lat: city.lat, lon: city.lon }, name: city.address.city, 
-            cityName: `${city.address.city || city.address.town}, ${city.address.country}`})}}>
-                <span className={`fi fi-${city.address.country_code}`} /> {city.address.town || city.address.city || city.address.country }</li>
+            return <li key={index} onClick={() => {setCity({dispatch,coords: { lat: city.lat, lon: city.lon }, name: city.address.city, cityName: `${city.address.city || city.address.town}, ${city.address.country}`})}}>
+              <span className={`fi fi-${city.address.country_code}`} /> {city.address.town || city.address.city || city.address.country }
+            </li>
           })
         }
         <li id="space"></li>
